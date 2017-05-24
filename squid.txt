@@ -1,0 +1,8 @@
+Download script Squid
+
+wget http://dedeerik.com/setup-squid.sh
+
+jalankan
+
+bash setup-squid.sh
+

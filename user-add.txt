@@ -1,0 +1,25 @@
+#!/bin/bash
+echo "-----------------------------------"
+echo "  MEMBUAT AKUN SSH BARU  "
+echo " ALL SUPPORTED BY TRJ SERVER "
+echo " https://www.facebook.com/rudiyanto17"
+echo " DEVELOPED BY RUDIYANTO "
+echo "-----------------------------------"
+echo -n "Nama akun: "
+read akun
+echo -n "Passwod: "
+read pass
+echo -n "Tanggal Exp: "
+read exp
+IP=`ifconfig eth0| awk 'NR==2 {print $2}'| awk -F: '{print $2}'`
+useradd -e `date -d "$exp days" +"%Y-%m-%d"` -g users -s /bin/false -M $akun
+echo -e "$pass\n$pass\n"|passwd $akun &> /dev/null
+echo "-------------------------------------"
+echo "        Data Login Akun Baru         "
+echo "-------------------------------------"
+echo -e "Username: $akun "
+echo -e "Password: $pass"
+echo -e "Aktif Selama: $exp hari"
+echo -e "IP: $IP "
+echo -e "Port: 443, 109 "
+echo "-------------------------------------"

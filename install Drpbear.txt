@@ -1,0 +1,32 @@
+Tutorial Cara Install Drobear
+
+1. Lakukan update terlebih dahulu pada VPS
+Yang satu ini wajib dilakukan pada saat setiap mau menginstall sesuatu
+
+	apt-get update
+
+2. Install Dropbear
+Nah sekarang barulah kita install dropbearnya, proses instalasinya sangatlah cepat karena dropbear ini memang sangat ringan
+
+	apt-get install dropbear
+
+3. Edit config dropbear
+Supaya dropbearnya berfungsi, maka anda harus mengedit config dropbearnya supaya bisa di tambahkan port dropbearnya atau sebagainya termasuk menambahkan banner
+
+nano /etc/default/dropbear
+
+Pada bagian 
+
+NO_START=1
+DROPBEAR_PORT=22
+DROPBEAR_EXTRA_ARGS=
+
+ganti menjadi
+
+NO_START=0
+DROPBEAR_PORT=443
+DROPBEAR_EXTRA_ARGS="-p 143 -p 110"
+
+4. Restart Dropbear
+
+	Service dropbear restart

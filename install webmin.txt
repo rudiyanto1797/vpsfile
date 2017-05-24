@@ -1,0 +1,6 @@
+Dengan menggunakan versi DEB.
+1. Karena menggunakan cara versi DEB, maka pertama - tama anda harus mendownload file deb webminnya dengan cara :
+	wget http://prdownloads.sourceforge.net/webadmin/webmin_1.750_all.deb
+2. Cara terakhir dengan mengeksekusi file deb yang telah di download
+	dpkg --install webmin_1.750_all.deb
+Jalankan webmin di browser kesayangan anda dengan mengetikan url seperti https://IP_Server:10000
